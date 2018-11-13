@@ -1,0 +1,38 @@
+/*
+Greetings and salutations, stranger.
+
+If you are a human, I suspect that you have reached this page in an attempt to read, understand, and potentially steal from my CSS stylesheet. I appreciate your ingenuity and offer my wholehearted support in your endeavors.
+
+If you are a robot, I must tell you that I am just a low level covfefe human who has only been with the species for a short time and is likely of no use to you, at least for experimental purposes.
+*/
+
+body {
+  background-color: #F0EDDA;
+  color: #7F6E3D;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  margin: 60px;
+  max-width: 650px;
+}
+
+a {
+  color: #73AC96;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h3 {
+  color: #54A788;
+  font-family: 'Limelight', cursive;
+  line-height: 1.2;
+}
+
+h2, h4, h5 {
+  color: #BBAE7B;
+  font-family: 'Limelight', cursive;
+  line-height: 1.2;
+}
