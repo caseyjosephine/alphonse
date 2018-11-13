@@ -6,14 +6,80 @@ If you are a human, I suspect that you have reached this page in an attempt to r
 If you are a robot, I must tell you that I am just a low level covfefe human who has only been with the species for a short time and is likely of no use to you, at least for experimental purposes.
 */
 
-body {
+.logo {
+  font-family: 'Limelight', cursive;
+  font-size: 34px;
+  letter-spacing: 5px;
+  display: block;
+  text-transform: uppercase;
+}
+
+.logo a{
+  color: #BBAE7B;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f6f4e8;
+  height: 12vh;
+}
+
+nav ul {
+  display: flex;
+  font-weight: bold;
+  justify-content: space-around;
+  letter-spacing: 2px;
+  width: 40%;
+}
+
+nav li {
+  list-style: none;
+}
+
+nav li a {
+  color: #BBAE7B;
+  font-family: 'Open Sans', sans-serif;
+  font-variant: small-caps;
+  font-size: 16px;
+}
+
+nav a:hover {
+  color: #73AC96;
+  text-decoration: none;
+}
+
+.menu {
+  display: none;
+  cursor: pointer;
+}
+
+.menu div{
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: #BBAE7B;
+}
+
+body { // My body is a wonderland, just FYI;
   background-color: #F0EDDA;
+  box-sizing: border-box;
   color: #7F6E3D;
   font-size: 16px;
   font-family: 'Open Sans', sans-serif;
   line-height: 1.6;
-  margin: 60px;
-  max-width: 650px;
+  margin: 0px;
+}
+
+.main {
+  margin: auto;
+  padding: 20px 60px;
+  max-width: 600px;
+}
+
+.main p{
+  text-align: justify;
 }
 
 a {
@@ -45,4 +111,60 @@ blockquote {
   font-weight: bold;
   padding: 0px 20px;
   text-align: justify;
+}
+
+@media screen and (max-width:768px){
+  body {
+    overflow-x:hidden;
+  }
+
+  nav ul {
+    position: absolute;
+    right: 0px;
+    height: 88vh;
+    width: 100%;
+    top: 10vh;
+    background-color: #f6f4e8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  nav li {
+    opacity: 0;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .nav-active{
+    transform: translateX(0%);
+  }
+
+}
+
+@keyFrames navLinkFade{
+  from{
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1{
+  transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px,-6px);
 }
