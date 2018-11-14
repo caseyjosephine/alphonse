@@ -6,6 +6,71 @@ If you are a human, I suspect that you have reached this page in an attempt to r
 If you are a robot, I must tell you that I am just a low level covfefe human who has only been with the species for a short time and is likely of no use to you, at least for experimental purposes.
 */
 
+body { // My body is a wonderland, just FYI;
+  background-color: #f6f4e8;
+  box-sizing: border-box;
+  color: #7F6E3D;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  margin: 0px;
+  padding-bottom: 8vh;
+}
+
+/*
+Here's a bunch of basic CSS to make everything nice and readable on the screen.
+
+The main thing to remember here is that people don't like to read tiny text, so we're not going to make them do that now are we.
+*/
+
+a {
+  color: #73AC96;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h3 {
+  color: #54A788;
+  font-family: 'Limelight', cursive;
+  line-height: 1.2;
+}
+
+h2, h4, h5 {
+  color: #BBAE7B;
+  font-family: 'Limelight', cursive;
+  line-height: 1.2;
+}
+
+blockquote {
+  border-left: 3px solid #73AC96;
+  color: #BBAE7B;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+  padding: 0px 20px;
+  text-align: justify;
+}
+
+/*
+Let's make the navbar look cooler than Derek Zoolander. We'll start with the actual container we're going to use for the navigation bar.
+*/
+
+nav {
+  align-items: center;
+  background-color: #f6f4e8;
+  border-top: 15px solid #73AC96;
+  display: flex;
+  height: 12vh;
+  justify-content: space-around;
+}
+
+/*
+Cool. The left side of the navbar has the logo, so that should probably look hella awesome.
+*/
+
 .logo {
   font-family: 'Limelight', cursive;
   font-size: 34px;
@@ -18,14 +83,14 @@ If you are a robot, I must tell you that I am just a low level covfefe human who
   color: #BBAE7B;
 }
 
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #f6f4e8;
-  height: 12vh;
-  border-top: 15px solid #73AC96;
+.logo h1 {
+  border-top: 2px solid #ddd09d;
+  border-bottom: 2px solid #ddd09d;
 }
+
+/*
+The main navigation links are to the right of the navbar, and since we actually want people to click on those we'll try to make them look good too.
+*/
 
 nav ul {
   display: flex;
@@ -51,77 +116,91 @@ nav a:hover {
   text-decoration: none;
 }
 
+/*
+That looks great, but what about the people who are browsing this website on their phone? Do you really want to make them read words? How could you do something like that?
+
+Let's use CSS and Javascript to make a responsive menu for people on mobile browsers. Hat tip to Dev Ed on YouTube for this pretty little thing.
+*/
+
 .menu {
-  display: none;
   cursor: pointer;
+  display: none;
 }
 
 .menu div{
-  width: 25px;
+  background-color: #BBAE7B;
   height: 3px;
   margin: 5px;
-  background-color: #BBAE7B;
+  width: 25px;
 }
 
-body { // My body is a wonderland, just FYI;
-  background-color: #f6f4e8;
-  box-sizing: border-box;
-  color: #7F6E3D;
-  font-size: 16px;
-  font-family: 'Open Sans', sans-serif;
-  line-height: 1.6;
-  margin: 0px;
-  padding-bottom: 8vh;
-}
+/*
+It's time for the main event! Well, the main container. This really isn't all that exciting, to be honest.
+*/
 
 .main {
   background-color: #F0EDDA;
-  margin: auto;
-  padding: 40px 80px;
-  max-width: 600px;
   border-top-left-radius: 160px;
   border-top-right-radius: 0px;
+  margin: auto;
+  max-width: 600px;
+  padding: 40px 80px;
 }
 
 .main p{
   text-align: justify;
 }
 
+/*
+We've also got a footer to worry about. We're gonna keep this super basic, but also pretty visible. The reason it's gonna be visible is that we're putting a bunch of
+*/
 
-a {
-  color: #73AC96;
+.footer {
+    position: fixed;
+    height: 10vh;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #73AC96;
+    color: #f6f4e8;
+    text-align: center;
+    font-size:28px;
+    line-height: .7;
+    padding:auto;
+}
+
+.footer a {
+  color: #f6f4e8;
+}
+
+.footer a:hover{
+  color: #ddd09d;
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
+/*
+It would be great if the social icons were super easy to change and update on the fly, so let's plan for that.
+*/
+
+.icons {
+  display:flex;
+  list-style: none;
+  justify-content: space-around;
 }
 
-nav h1 {
-  border-top: 2px solid #ddd09d;
-  border-bottom: 2px solid #ddd09d;
-}
-h1, h3 {
-  color: #54A788;
-  font-family: 'Limelight', cursive;
-  line-height: 1.2;
+/*
+We're gonna want the footer to be hidden using Javascript when the responsive navbar is toggled.
+*/
+
+.footer-hide {
+  display:none;
 }
 
-h2, h4, h5 {
-  color: #BBAE7B;
-  font-family: 'Limelight', cursive;
-  line-height: 1.2;
-}
+/*
+Realistically, the people looking at this website are on their phones. That's cool, we don't mind that.
 
-blockquote {
-  border-left: 3px solid #73AC96;
-  color: #BBAE7B;
-  font-size: 18px;
-  font-style: italic;
-  font-weight: bold;
-  padding: 0px 20px;
-  text-align: justify;
-}
+Actually, since we're specifically planning for mobile users, let's optimize everything to make it easy for them to browse. Then they will love us forever and maybe follus us on Instagram.
+*/
 
 @media screen and (max-width:768px){
   body {
@@ -156,38 +235,9 @@ blockquote {
 
 }
 
-.footer {
-    position: fixed;
-    height: 10vh;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #73AC96;
-    color: #f6f4e8;
-    text-align: center;
-    font-size:30px;
-    line-height: .7;
-    padding:auto;
-}
-
-.footer-hide {
-  display:none;
-}
-
-.footer a {
-  color: #f6f4e8;
-}
-
-.footer a:hover{
-  color: #ddd09d;
-  text-decoration: none;
-}
-
-.icons {
-  display:flex;
-  list-style: none;
-  justify-content: space-around;
-}
+/*
+We're at the home stretch now! The final little bit is making sure that our Javascript works.
+*/
 
 @keyFrames navLinkFade{
   from{
