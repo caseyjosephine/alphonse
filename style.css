@@ -24,6 +24,7 @@ nav {
   align-items: center;
   background-color: #f6f4e8;
   height: 12vh;
+  border-top: 15px solid #73AC96;
 }
 
 nav ul {
@@ -63,24 +64,29 @@ nav a:hover {
 }
 
 body { // My body is a wonderland, just FYI;
-  background-color: #F0EDDA;
+  background-color: #f6f4e8;
   box-sizing: border-box;
   color: #7F6E3D;
   font-size: 16px;
   font-family: 'Open Sans', sans-serif;
   line-height: 1.6;
   margin: 0px;
+  padding-bottom: 8vh;
 }
 
 .main {
+  background-color: #F0EDDA;
   margin: auto;
-  padding: 20px 60px;
+  padding: 40px 80px;
   max-width: 600px;
+  border-top-left-radius: 160px;
+  border-top-right-radius: 0px;
 }
 
 .main p{
   text-align: justify;
 }
+
 
 a {
   color: #73AC96;
@@ -91,6 +97,10 @@ a:hover {
   text-decoration: underline;
 }
 
+nav h1 {
+  border-top: 2px solid #ddd09d;
+  border-bottom: 2px solid #ddd09d;
+}
 h1, h3 {
   color: #54A788;
   font-family: 'Limelight', cursive;
@@ -144,6 +154,39 @@ blockquote {
     transform: translateX(0%);
   }
 
+}
+
+.footer {
+    position: fixed;
+    height: 10vh;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #73AC96;
+    color: #f6f4e8;
+    text-align: center;
+    font-size:30px;
+    line-height: .7;
+    padding:auto;
+}
+
+.footer-hide {
+  display:none;
+}
+
+.footer a {
+  color: #f6f4e8;
+}
+
+.footer a:hover{
+  color: #ddd09d;
+  text-decoration: none;
+}
+
+.icons {
+  display:flex;
+  list-style: none;
+  justify-content: space-around;
 }
 
 @keyFrames navLinkFade{
