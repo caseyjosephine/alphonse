@@ -1,6 +1,6 @@
 # Welcome to Alphonse
 
-Alphonse is a simple, beautiful responsive template written with HTML, CSS, and vanilla JS. 
+Alphonse is a simple, beautiful, responsive template written with HTML, CSS, and JS. 
 
 You're free to use it in any project.
 
